@@ -7,9 +7,8 @@
 --%>
 
 <sql:query var="counselorQuery" dataSource="jdbc/Examen1">
-    SELECT * FROM Director
-    WHERE Director.Carrera = Carrera.ClaveCarrera
-    <sql:param value="${param.CarreraClave}"/>
+SELECT * FROM director, carrera
+    WHERE director.carrera = carrera.clavecarrera
 </sql:query>
     
     
